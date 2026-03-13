@@ -1,0 +1,30 @@
+# Grok Dark - Inspired by xAI's Grok visual design language
+# Stark black and white minimalism with cosmic accents
+
+# ANSI Normal (0-7)
+palette = 0=#1A1A1A
+palette = 1=#FF5C5C
+palette = 2=#5CFF8A
+palette = 3=#FFD75C
+palette = 4=#5C9FFF
+palette = 5=#C77DFF
+palette = 6=#5CE5E5
+palette = 7=#A0A0A0
+
+# ANSI Bright (8-15)
+palette = 8=#4D4D4D
+palette = 9=#FF8585
+palette = 10=#85FFAB
+palette = 11=#FFE585
+palette = 12=#85B8FF
+palette = 13=#D9A3FF
+palette = 14=#85F0F0
+palette = 15=#FFFFFF
+
+# Base colors
+background = #101113
+foreground = #F5F5F5
+cursor-color = #FFFFFF
+cursor-text = #101113
+selection-background = #3D3D3D
+selection-foreground = #FFFFFF
