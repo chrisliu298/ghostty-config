@@ -1,54 +1,49 @@
-# Window Settings
-# window-width = 124
-# window-height = 36
+# Window
 window-padding-x = 16
 window-padding-y = 16
 window-padding-balance = true
 window-save-state = always
 window-theme = system
-confirm-close-surface = false
+confirm-close-surface = false # tmux preserves sessions if needed
 auto-update-channel = stable
 resize-overlay = always
 resize-overlay-duration = 750ms
 
-# macOS-Specific Window Settings
-macos-non-native-fullscreen = true
-# macos-titlebar-style = tabs
+# macOS
+macos-non-native-fullscreen = true # avoids Space-switching animation
 macos-titlebar-style = transparent
-macos-option-as-alt = true
+macos-option-as-alt = true # enables Alt keybinds; breaks macOS special chars
 
-# Appearance/Theme
-# theme = Alabaster
-# theme = GitHub Dark Dimmed Modified
+# Appearance
 theme = GitHub Dark
 # background-opacity = 0.95
 background-blur = 16
 minimum-contrast = 1.1
 
-# Font/Typography
+# Font
 font-family = Berkeley Mono
 font-size = 18
 font-thicken = true
-bold-is-bright = false
+bold-is-bright = false # prevent bold from shifting to bright palette colors
 
 # Cursor
 cursor-color = #FFFFFF
 cursor-style = bar
 cursor-style-blink = false
-adjust-cursor-thickness = 4
+adjust-cursor-thickness = 4 # thicker bar for visibility on HiDPI
 
-# Cell/Display
-adjust-cell-height = 10%
-adjust-cell-width = -10%
+# Cell
+adjust-cell-height = 10% # taller lines + tighter chars for
+adjust-cell-width = -10% # Berkeley Mono readability
 
 # Scrollback
-scrollback-limit = 134217728
+scrollback-limit = 134217728 # 128 MiB; effectively unlimited
 
 # Links
 link-url = true
 
 # Keybindings
-keybind = shift+enter=text:\x1b\r
+keybind = shift+enter=text:\x1b\r # send ESC+CR so apps detect Shift+Enter
 keybind = cmd+d=new_split:right
 keybind = cmd+shift+d=new_split:down
 keybind = cmd+opt+arrow_left=goto_split:left
@@ -59,19 +54,12 @@ keybind = cmd+k=clear_screen
 keybind = cmd+r=prompt_surface_title
 keybind = cmd+shift+left=move_tab:-1
 keybind = cmd+shift+right=move_tab:1
-keybind = cmd+left=text:\x1b[H
-keybind = cmd+right=text:\x1b[F
+keybind = cmd+left=text:\x1b[H # Home (macOS has no dedicated key)
+keybind = cmd+right=text:\x1b[F # End
 
 # Working Directory
 working-directory = home
-# window-inherit-working-directory = false
 
 # Shell Integration
 shell-integration = detect
-shell-integration-features = sudo,ssh-terminfo,ssh-env
-
-# Notifications
-# desktop-notifications = true
-# notify-on-command-finish = always
-# notify-on-command-finish-action = no-bell,notify
-# notify-on-command-finish-after = 30s
+shell-integration-features = sudo,ssh-terminfo,ssh-env # cursor/title handled by prompt and tmux

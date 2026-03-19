@@ -1,10 +1,12 @@
 # Ghostty Config
 
-Personal [Ghostty](https://ghostty.org/) terminal emulator configuration for macOS.
+Personal terminal emulator configuration for macOS, compatible with both [Ghostty](https://ghostty.org/) and [cmux](https://github.com/manaflow-ai/cmux). I personally recommend cmux for its rich built-in multiplexing features.
+
+For the full list of configuration options, see the [Ghostty config reference](https://ghostty.org/docs/config/reference).
 
 ## Setup
 
-Clone this repo and symlink to Ghostty's config directory:
+Clone this repo and symlink to the config directory:
 
 ```bash
 git clone https://github.com/chrisliu298/ghostty-config.git
@@ -18,19 +20,3 @@ Or copy the files directly:
 cp config ~/.config/ghostty/config
 cp -r themes ~/.config/ghostty/themes/
 ```
-
-## Highlights
-
-- **Font**: Berkeley Mono, size 18
-- **Theme**: GitHub Dark (custom themes included)
-- **Window**: Transparent titlebar, non-native fullscreen, system theme
-- **Keybindings**: Cmd-based splits, tab movement, and navigation
-
-## Custom Themes
-
-| Theme | Description |
-|-------|-------------|
-| GitHub Dark | Dark theme based on GitHub's VS Code extension |
-| GitHub Dark Dimmed Modified | Modified dimmed variant of GitHub Dark |
-| Grok Dark | Stark black and white minimalism with cosmic accents |
-| Grok Light | Light variant of the Grok theme |
