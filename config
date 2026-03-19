@@ -4,15 +4,18 @@ window-padding-y = 16
 window-padding-balance = true
 window-save-state = always
 window-theme = system
-confirm-close-surface = false # tmux preserves sessions if needed
+# tmux preserves sessions if needed
+confirm-close-surface = false
 auto-update-channel = stable
 resize-overlay = always
 resize-overlay-duration = 750ms
 
 # macOS
-macos-non-native-fullscreen = true # avoids Space-switching animation
+# avoids Space-switching animation
+macos-non-native-fullscreen = true
 macos-titlebar-style = transparent
-macos-option-as-alt = true # enables Alt keybinds; breaks macOS special chars
+# enables Alt keybinds; breaks macOS special chars
+macos-option-as-alt = true
 
 # Appearance
 theme = GitHub Dark
@@ -24,20 +27,23 @@ minimum-contrast = 1.1
 font-family = Berkeley Mono
 font-size = 18
 font-thicken = true
-bold-is-bright = false # prevent bold from shifting to bright palette colors
+# bold-is-bright removed in newer Ghostty
 
 # Cursor
 cursor-color = #FFFFFF
 cursor-style = bar
 cursor-style-blink = false
-adjust-cursor-thickness = 4 # thicker bar for visibility on HiDPI
+# thicker bar for visibility on HiDPI
+adjust-cursor-thickness = 4
 
 # Cell
-adjust-cell-height = 10% # taller lines + tighter chars for
-adjust-cell-width = -10% # Berkeley Mono readability
+# taller lines + tighter chars for Berkeley Mono readability
+adjust-cell-height = 10%
+adjust-cell-width = -10%
 
 # Scrollback
-scrollback-limit = 134217728 # 128 MiB; effectively unlimited
+# 128 MiB; effectively unlimited
+scrollback-limit = 134217728
 
 # Links
 link-url = true
@@ -62,4 +68,5 @@ working-directory = home
 
 # Shell Integration
 shell-integration = detect
-shell-integration-features = sudo,ssh-terminfo,ssh-env # cursor/title handled by prompt and tmux
+# cursor/title handled by prompt and tmux
+shell-integration-features = sudo,ssh-terminfo,ssh-env
