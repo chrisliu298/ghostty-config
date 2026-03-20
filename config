@@ -1,55 +1,38 @@
-# Window
 window-padding-x = 16
 window-padding-y = 16
 window-padding-balance = true
 window-save-state = always
 window-theme = system
-# tmux preserves sessions if needed
 confirm-close-surface = false
 auto-update-channel = stable
 resize-overlay = always
 resize-overlay-duration = 750ms
 
-# macOS
-# avoids Space-switching animation
 macos-non-native-fullscreen = true
 macos-titlebar-style = transparent
-# enables Alt keybinds; breaks macOS special chars
 macos-option-as-alt = true
 
-# Appearance
 theme = GitHub Dark
-# background-opacity = 0.95
 background-blur = 16
 minimum-contrast = 1.1
 
-# Font
 font-family = Berkeley Mono
 font-size = 18
 font-thicken = true
-# bold-is-bright removed in newer Ghostty
 
-# Cursor
 cursor-color = #FFFFFF
 cursor-style = bar
 cursor-style-blink = false
-# thicker bar for visibility on HiDPI
 adjust-cursor-thickness = 4
 
-# Cell
-# taller lines + tighter chars for Berkeley Mono readability
 adjust-cell-height = 10%
 adjust-cell-width = -10%
 
-# Scrollback
-# 128 MiB; effectively unlimited
 scrollback-limit = 134217728
 
-# Links
 link-url = true
 
-# Keybindings
-keybind = shift+enter=text:\x1b\r # send ESC+CR so apps detect Shift+Enter
+keybind = shift+enter=text:\x1b\r
 keybind = cmd+d=new_split:right
 keybind = cmd+shift+d=new_split:down
 keybind = cmd+opt+arrow_left=goto_split:left
@@ -60,13 +43,10 @@ keybind = cmd+k=clear_screen
 keybind = cmd+r=prompt_surface_title
 keybind = cmd+shift+left=move_tab:-1
 keybind = cmd+shift+right=move_tab:1
-keybind = cmd+left=text:\x1b[H # Home (macOS has no dedicated key)
-keybind = cmd+right=text:\x1b[F # End
+keybind = cmd+left=text:\x01
+keybind = cmd+right=text:\x05
 
-# Working Directory
 working-directory = home
 
-# Shell Integration
 shell-integration = detect
-# cursor/title handled by prompt and tmux
 shell-integration-features = sudo,ssh-terminfo,ssh-env
